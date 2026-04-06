@@ -4,7 +4,7 @@ public class Main {
         System.out.println("Hello SkyPro!");
 
         leapYear(1892);
-        deviceYear(1, 2004);
+        checkDeviceYear(1, 2004);
         int totalDays = deliveryDays(95);
         System.out.println("Потребуется дней: " + totalDays + " для доставки!");
     }
@@ -20,7 +20,7 @@ public class Main {
         }
     }
 
-    public static void deviceYear(int osType, int deviceYear) {
+    public static void checkDeviceYear(int osType, int deviceYear) {
         //task2
         System.out.println("Task2");
 
@@ -42,24 +42,23 @@ public class Main {
     }
 
     public static int deliveryDays(int distance) {
-        //task2
+        // task3
         System.out.println("Task3");
+
 
         int days = 1;
         if (distance > 100) {
             return 0;
-        }
-        if (distance <= 20) {
-        }
-        if (distance > 20) {
+        } else if (distance <= 20) {
+            return days;
+        } else if (distance <= 60) {
             days++;
-        }
-        if (distance > 60) {
-            days++;
-
+        } else if (distance > 60) {
+            days += 2;
         }
         return days;
-
     }
 
 }
+
+
